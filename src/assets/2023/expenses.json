@@ -1,0 +1,46 @@
+{
+    "expenseData": [
+        {
+            "name": "Drums",
+            "totalAmount": 40000,
+            "advance": false,
+            "note": "N/A"
+        },
+        {
+            "name": "Disco Dance",
+            "totalAmount": 22000,
+            "advance": false,
+            "note": "N/A"
+        },
+        {
+            "name": "Cool Drinks",
+            "totalAmount": 8270,
+            "note": "N/A"
+        },
+        {
+            "name": "Fruit salad - Tuesday Night",
+            "totalAmount": 800,
+            "note": "N/A"
+        },
+        {
+            "name": "Crackers",
+            "totalAmount": 15000,
+            "note": "N/A"
+        },
+        {
+            "name": "Monday Night Tea/Vada",
+            "totalAmount": 11130,
+            "note": "N/A"
+        },
+        {
+            "name": "Icream stall",
+            "totalAmount": 13000,
+            "note": "N/A"
+        },
+        {
+            "name": "Co2 Color paper Shot",
+            "totalAmount": 20000,
+            "note": "N/A"
+        }
+    ]
+}

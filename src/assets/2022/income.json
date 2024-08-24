@@ -1,0 +1,445 @@
+{
+    "collection": [
+        {
+            "name": "Shree G",
+            "sonof": "",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "ArunKumar S",
+            "sonof": "Saker",
+            "amount": 5000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Dinesh Amirtharaj",
+            "sonof": "RS Amirtharaj",
+            "amount": 5000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Siva Murugan",
+            "sonof": "Iyyamperumal",
+            "amount": 2000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Sridharn",
+            "sonof": "Narayanan",
+            "amount": 2500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "TK Hariharan",
+            "sonof": "Kannan",
+            "amount": 2000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Prem   Chander",
+            "sonof": "Parthasarathy",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Velan",
+            "sonof": "",
+            "amount": 3000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Raveen",
+            "sonof": "",
+            "amount": 2500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Sujai R",
+            "sonof": "K.Rajendiran",
+            "amount": 2000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Ranish",
+            "sonof": "Vijayan",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Sathish",
+            "sonof": "",
+            "amount": 2000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Siva",
+            "sonof": "Pullingam",
+            "amount": 2000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Gopal Krishnan",
+            "sonof": "",
+            "amount": 2000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Vijay & Ajay",
+            "sonof": "Ambiraj",
+            "amount": 2000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Jebamani",
+            "sonof": "",
+            "amount": 2000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Vignesh Balaji S",
+            "sonof": "Selvaraj",
+            "amount": 1500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Logesh I",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Saran",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "VinothKumar",
+            "sonof": "AnnathaPandi",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Kiran Suriya",
+            "sonof": "Kannaka Sapapathy",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Muthukumar",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Sakthikannan",
+            "sonof": "Serma Ananthan",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Mughesh",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "VK. Nishanth",
+            "sonof": "Kandipan",
+            "amount": 2000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Rathina Sabapathy",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Periyasamy V",
+            "sonof": "Vijayan",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Ramkumar J",
+            "sonof": "Jayaraj",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Ramkumar J",
+            "sonof": "Jayaseelan",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Muthu Kumaran G",
+            "sonof": "Gunasekar",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Vasanth Kumar",
+            "sonof": "Athimuthu",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Karthick",
+            "sonof": "Muruganatham",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Vasanth",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "RajKumar A",
+            "sonof": "AnnathaPandi",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Om Prakash",
+            "sonof": "Rajaythiran",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Saravanan",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Saravana Perumal",
+            "sonof": "Jaipaul",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Periyasamy",
+            "sonof": "Arul aanatham",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Vignesh Sakthikumar",
+            "sonof": "Murugan",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Maghesh S",
+            "sonof": "Santhanakumar",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Prasanth P",
+            "sonof": "Ponraj",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Gowtham R.T",
+            "sonof": "Thinakaran",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "TulasiRaman M",
+            "sonof": "MuthuSingam",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "AjithKumar S",
+            "sonof": "Sritharan",
+            "amount": 1000,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Ranjith Babu V",
+            "sonof": "Vijayan",
+            "amount": 1000,
+            "mode": "cash",
+            "status": "paid"
+        },
+        {
+            "name": "Raman",
+            "sonof": "",
+            "amount": 1000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Linganathan M",
+            "sonof": "Murugan V",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Selvakumar N",
+            "sonof": "",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Ponvel",
+            "sonof": "",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Akash Kannan",
+            "sonof": "",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "VijayKumar",
+            "sonof": "Balakrishnan",
+            "amount": 5000,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Kamaraj",
+            "sonof": "Periyasamy",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Dinesh",
+            "sonof": "",
+            "amount": 500,
+            "mode": "GPay",
+            "status": "paid"
+        },
+        {
+            "name": "MuthuRaman M",
+            "sonof": "Maghanthiran",
+            "amount": 500,
+            "mode": "cash",
+            "status": "paid"
+        },
+        {
+            "name": "JR. Prabhakaran",
+            "sonof": "Ravinathan",
+            "amount": 500,
+            "mode": "GPay",
+            "status": "paid"
+        },
+        {
+            "name": "MuthuVelan A",
+            "sonof": "Alagesan",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Siva & Vishnu",
+            "sonof": "AthiKannan",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Kutty mani",
+            "sonof": "",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "CibiRaj",
+            "sonof": "Sivakumar",
+            "amount": 500,
+            "mode": "cash",
+            "status": "paid"
+        },
+        {
+            "name": "Mothikumaran",
+            "sonof": "Balamurugan",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Nantha balan K",
+            "sonof": "Kailasa esa marthandam",
+            "amount": 500,
+            "mode": "Gpay",
+            "status": "paid"
+        },
+        {
+            "name": "Shree M",
+            "sonof": "Mathavan",
+            "amount": 500,
+            "mode": "Cash",
+            "status": "paid"
+        },
+        {
+            "name": "Others",
+            "sonof": "",
+            "amount": 2000,
+            "mode": "-",
+            "status": "paid"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "payment_details": {
+        "bank_transfer": {
+            "account_number": "666033655",
+            "ifsc_code": "IDIB000M315",
+            "bank_name": "Indian Bank",
+            "account_holder": "RT. Gowtham"
+        },
+        "gpay": {
+            "phone_number": "6382451322",
+            "upi_id": "rtgautham@okaxis"
+        }
+    },
+    "note": "Update Gowtham after sending money. Any clarification feel free to call.",
+    "contact": {
+        "mobile": "+91-9500207295"
+    }
+}

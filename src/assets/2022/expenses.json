@@ -1,0 +1,32 @@
+{
+    "expenseData": [
+        {
+            "name": "Drums Plus Dance",
+            "totalAmount": 30000,
+            "advance": false,
+            "note": "N/A"
+        },
+        {
+            "name": "Volleyball and net",
+            "totalAmount": 1400,
+            "advance": false,
+            "note": "N/A"
+        },
+        {
+            "name": "Future expenses",
+            "totalAmount": 815,
+            "advance": false,
+            "note": "For volleyball puntcure and ball damages"
+        },
+        {
+            "name": "Cool Drinks & Others",
+            "totalAmount": 18600,
+            "note": "கூல் டிரிங்ஸ், போண்டா மளிகை, கோவில் சுத்தம், சப்பரம் டிரம்ஸ்."
+        },
+        {
+            "name": "Crackers",
+            "totalAmount": 7685,
+            "note": "N/A"
+        }
+    ]
+}
