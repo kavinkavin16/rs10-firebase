@@ -1,7 +1,9 @@
 // src/components/Contacts.js
 import React, { useState, useEffect } from 'react';
-import { ref, getDownloadURL } from 'firebase/storage'; // Import these from Firebase
+import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebaseConfig';
+import { Container, Card, ListGroup, Spinner, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Contacts() {
     const [contactsData, setContactsData] = useState(null);
@@ -27,18 +29,26 @@ function Contacts() {
         fetchContactsData();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
+    if (loading) return <Spinner animation="border" />;
+    if (error) return <Alert variant="danger">{error}</Alert>;
 
     return (
-        <div>
-            <h1>Contacts</h1>
-            {contactsData && Object.entries(contactsData).map(([name, phone]) => (
-                <div key={name}>
-                    <p>{name}: {phone}</p>
-                </div>
-            ))}
-        </div>
+        <Container className="mt-4">
+            <h1 className="mb-4">Contacts</h1>
+            {contactsData && (
+                <Card>
+                    <Card.Body>
+                        <ListGroup>
+                            {Object.entries(contactsData).map(([name, phone]) => (
+                                <ListGroup.Item key={name}>
+                                    <strong>{name}:</strong> {phone}
+                                </ListGroup.Item>
+                            ))}
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+            )}
+        </Container>
     );
 }
 

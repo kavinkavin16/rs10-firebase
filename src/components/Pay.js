@@ -1,6 +1,9 @@
+// src/components/Pay.js
 import React, { useState, useEffect } from 'react';
 import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebaseConfig';
+import { Container, Card, Spinner, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Pay() {
     const [payData, setPayData] = useState(null);
@@ -11,14 +14,11 @@ function Pay() {
             try {
                 const payRef = ref(storage, 'pay/pay.json');
                 const url = await getDownloadURL(payRef);
-                console.log('Download URL:', url); // Log the URL
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
-                console.log('Fetched data:', data); // Log the data
                 setPayData(data);
             } catch (error) {
-                console.error('Error fetching pay data:', error);
                 setError('Failed to fetch pay data.');
             }
         };
@@ -27,31 +27,41 @@ function Pay() {
     }, []);
 
     return (
-        <div>
-            <h1>Pay</h1>
-            {error && <p>{error}</p>}
+        <Container className="mt-4">
+            <h1 className="mb-4">Payment Information</h1>
+            {error && <Alert variant="danger">{error}</Alert>}
             {payData ? (
-                <div>
-                    <h2>Bank Transfer</h2>
-                    <p>Account Number: {payData.payment_details.bank_transfer.account_number}</p>
-                    <p>IFSC Code: {payData.payment_details.bank_transfer.ifsc_code}</p>
-                    <p>Bank Name: {payData.payment_details.bank_transfer.bank_name}</p>
-                    <p>Account Holder: {payData.payment_details.bank_transfer.account_holder}</p>
+                <Card>
+                    <Card.Body>
+                        <Card.Title>Payment Details</Card.Title>
 
-                    <h2>GPay</h2>
-                    <p>Phone Number: {payData.payment_details.gpay.phone_number}</p>
-                    <p>UPI ID: {payData.payment_details.gpay.upi_id}</p>
+                        <Card.Subtitle className="mb-2 text-muted">Bank Transfer</Card.Subtitle>
+                        <Card.Text>
+                            <strong>Account Number:</strong> {payData.payment_details.bank_transfer.account_number}<br />
+                            <strong>IFSC Code:</strong> {payData.payment_details.bank_transfer.ifsc_code}<br />
+                            <strong>Bank Name:</strong> {payData.payment_details.bank_transfer.bank_name}<br />
+                            <strong>Account Holder:</strong> {payData.payment_details.bank_transfer.account_holder}
+                        </Card.Text>
 
-                    <h2>Contact</h2>
-                    <p>Mobile: {payData.contact.mobile}</p>
+                        <Card.Subtitle className="mb-2 text-muted">GPay</Card.Subtitle>
+                        <Card.Text>
+                            <strong>Phone Number:</strong> {payData.payment_details.gpay.phone_number}<br />
+                            <strong>UPI ID:</strong> {payData.payment_details.gpay.upi_id}
+                        </Card.Text>
 
-                    <h2>Note</h2>
-                    <p>{payData.note}</p>
-                </div>
+                        <Card.Subtitle className="mb-2 text-muted">Contact</Card.Subtitle>
+                        <Card.Text>
+                            <strong>Mobile:</strong> {payData.contact.mobile}
+                        </Card.Text>
+
+                        <Card.Subtitle className="mb-2 text-muted">Note</Card.Subtitle>
+                        <Card.Text>{payData.note}</Card.Text>
+                    </Card.Body>
+                </Card>
             ) : (
-                <p>Loading...</p>
+                <Spinner animation="border" />
             )}
-        </div>
+        </Container>
     );
 }
 
