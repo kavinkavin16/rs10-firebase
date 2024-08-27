@@ -5,7 +5,7 @@ import { Card, ListGroup, Spinner, Alert, Form, Container } from 'react-bootstra
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Income() {
-    const [incomeData, setIncomeData] = useState(null);
+    const [incomeData, setIncomeData] = useState({ collection: [] });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [selectedYear, setSelectedYear] = useState('');
@@ -18,10 +18,8 @@ function Income() {
                 const result = await listAll(yearRef);
                 const yearFolders = result.prefixes.map(prefix => prefix.name);
 
-                // List all years including those not in Firebase Storage
                 setYears(yearFolders);
 
-                // Set default year to the current year if available
                 const currentYear = new Date().getFullYear().toString();
                 setSelectedYear(yearFolders.includes(currentYear) ? currentYear : (yearFolders[0] || '2022'));
             } catch (error) {
@@ -40,7 +38,12 @@ function Income() {
                 const url = await getDownloadURL(incomeRef);
                 const response = await fetch(url);
                 const data = await response.json();
-                setIncomeData(data);
+                // Ensure 'mode' is handled even if it's missing
+                const processedData = data.collection.map(entry => ({
+                    ...entry,
+                    mode: entry.mode || 'null', // Default to 'null' if mode is missing
+                }));
+                setIncomeData({ collection: processedData });
             } catch (error) {
                 setError('Error fetching income data');
                 console.error('Error fetching income data:', error);
@@ -54,7 +57,7 @@ function Income() {
 
     const handleYearChange = (e) => {
         setSelectedYear(e.target.value);
-        setLoading(true); // Set loading true when year changes
+        setLoading(true);
     };
 
     if (loading) return <Spinner animation="border" />;
@@ -72,13 +75,14 @@ function Income() {
                 </Form.Control>
             </Form.Group>
             <ListGroup>
-                {incomeData && incomeData.collection.map((entry, index) => (
+                {incomeData.collection.map((entry, index) => (
                     <ListGroup.Item key={index} className="mb-3">
                         <Card>
                             <Card.Body>
                                 <Card.Title>Name: {entry.name}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">Son of: {entry.sonof}</Card.Subtitle>
                                 <Card.Text>Amount: {entry.amount}</Card.Text>
+                                <Card.Text>Mode: {entry.mode}</Card.Text>
                                 <Card.Text>Phone: {entry.phone}</Card.Text>
                             </Card.Body>
                         </Card>

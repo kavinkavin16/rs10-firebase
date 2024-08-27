@@ -18,10 +18,8 @@ function Expenses() {
                 const result = await listAll(yearRef);
                 const yearFolders = result.prefixes.map(prefix => prefix.name);
 
-                // List all years including those not in Firebase Storage
                 setYears(yearFolders);
 
-                // Set default year to the current year if available
                 const currentYear = new Date().getFullYear().toString();
                 setSelectedYear(yearFolders.includes(currentYear) ? currentYear : (yearFolders[0] || '2022'));
             } catch (error) {
@@ -41,7 +39,9 @@ function Expenses() {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
-                setExpensesData(data.expenseData || []);
+                
+                // Adjusting for different possible data structures
+                setExpensesData(data.expenseData || data || []);
             } catch (error) {
                 setError('Error fetching expenses data');
                 console.error('Error fetching expenses data:', error);
@@ -55,7 +55,7 @@ function Expenses() {
 
     const handleYearChange = (e) => {
         setSelectedYear(e.target.value);
-        setLoading(true); // Set loading true when year changes
+        setLoading(true);
     };
 
     if (loading) return <Spinner animation="border" />;
@@ -79,8 +79,8 @@ function Expenses() {
                             <Card.Body>
                                 <Card.Title>{expense.name}</Card.Title>
                                 <Card.Text>Total Amount: {expense.totalAmount}</Card.Text>
-                                <Card.Text>Advance: {expense.advance}</Card.Text>
-                                <Card.Text>Note: {expense.note}</Card.Text>
+                                <Card.Text>Advance: {expense.advance ? 'Yes' : 'No'}</Card.Text>
+                                <Card.Text>Note: {expense.note || 'N/A'}</Card.Text>
                             </Card.Body>
                         </Card>
                     </ListGroup.Item>

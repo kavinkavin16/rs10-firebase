@@ -1,4 +1,3 @@
-// src/components/Contacts.js
 import React, { useState, useEffect } from 'react';
 import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebaseConfig';

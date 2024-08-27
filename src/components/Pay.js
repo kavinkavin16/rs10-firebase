@@ -1,4 +1,3 @@
-// src/components/Pay.js
 import React, { useState, useEffect } from 'react';
 import { ref, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebaseConfig';
@@ -34,7 +33,6 @@ function Pay() {
                 <Card>
                     <Card.Body>
                         <Card.Title>Payment Details</Card.Title>
-
                         <Card.Subtitle className="mb-2 text-muted">Bank Transfer</Card.Subtitle>
                         <Card.Text>
                             <strong>Account Number:</strong> {payData.payment_details.bank_transfer.account_number}<br />
@@ -42,18 +40,15 @@ function Pay() {
                             <strong>Bank Name:</strong> {payData.payment_details.bank_transfer.bank_name}<br />
                             <strong>Account Holder:</strong> {payData.payment_details.bank_transfer.account_holder}
                         </Card.Text>
-
                         <Card.Subtitle className="mb-2 text-muted">GPay</Card.Subtitle>
                         <Card.Text>
                             <strong>Phone Number:</strong> {payData.payment_details.gpay.phone_number}<br />
                             <strong>UPI ID:</strong> {payData.payment_details.gpay.upi_id}
                         </Card.Text>
-
                         <Card.Subtitle className="mb-2 text-muted">Contact</Card.Subtitle>
                         <Card.Text>
                             <strong>Mobile:</strong> {payData.contact.mobile}
                         </Card.Text>
-
                         <Card.Subtitle className="mb-2 text-muted">Note</Card.Subtitle>
                         <Card.Text>{payData.note}</Card.Text>
                     </Card.Body>

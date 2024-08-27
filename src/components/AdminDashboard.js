@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { storage } from '../firebaseConfig';
 import { ref, uploadString, getDownloadURL, listAll } from 'firebase/storage';
+import { storage } from '../firebaseConfig';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 
 const ALL_YEARS = Array.from({ length: 2050 - 1900 + 1 }, (_, i) => (1900 + i).toString());
@@ -19,10 +19,8 @@ function AdminDashboard() {
                 const result = await listAll(yearRef);
                 const yearFolders = result.prefixes.map(prefix => prefix.name);
 
-                // List all years including those not in Firebase Storage
-                setYears(ALL_YEARS);
+                setYears(yearFolders);
 
-                // Set the default year to the current year if it's not already set
                 const currentYear = new Date().getFullYear().toString();
                 setSelectedYear(yearFolders.includes(currentYear) ? currentYear : '2022');
             } catch (error) {
@@ -47,7 +45,6 @@ function AdminDashboard() {
                         setFormData(data.expenseData ? data.expenseData[0] : {});
                     }
                 } catch (error) {
-                    // If file doesn't exist, initialize empty data
                     setFormData({});
                 }
             } catch (error) {
@@ -99,7 +96,6 @@ function AdminDashboard() {
                     existingData.push(formData);
                 }
             } catch (error) {
-                // File doesn't exist, so initialize with an empty array
                 if (dataType === 'income') {
                     existingData = [formData];
                 } else if (dataType === 'expenses') {
@@ -145,19 +141,53 @@ function AdminDashboard() {
                 <>
                     <Form.Group controlId="formName" className="mb-3">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" name="name" value={formData.name || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="text"
+                            name="name"
+                            value={formData.name || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter name"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formSonOf" className="mb-3">
                         <Form.Label>Son of</Form.Label>
-                        <Form.Control type="text" name="sonof" value={formData.sonof || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="text"
+                            name="sonof"
+                            value={formData.sonof || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter son of"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formAmount" className="mb-3">
                         <Form.Label>Amount</Form.Label>
-                        <Form.Control type="number" name="amount" value={formData.amount || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="number"
+                            name="amount"
+                            value={formData.amount || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter amount"
+                        />
+                    </Form.Group>
+                    <Form.Group controlId="formMode" className="mb-3">
+                        <Form.Label>Mode</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="mode"
+                            value={formData.mode || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter mode"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formPhone" className="mb-3">
                         <Form.Label>Phone</Form.Label>
-                        <Form.Control type="text" name="phone" value={formData.phone || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="text"
+                            name="phone"
+                            value={formData.phone || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter phone"
+                        />
                     </Form.Group>
                 </>
             )}
@@ -165,19 +195,43 @@ function AdminDashboard() {
                 <>
                     <Form.Group controlId="formName" className="mb-3">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" name="name" value={formData.name || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="text"
+                            name="name"
+                            value={formData.name || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter name"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formTotalAmount" className="mb-3">
                         <Form.Label>Total Amount</Form.Label>
-                        <Form.Control type="number" name="totalAmount" value={formData.totalAmount || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="number"
+                            name="totalAmount"
+                            value={formData.totalAmount || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter total amount"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formAdvance" className="mb-3">
                         <Form.Label>Advance</Form.Label>
-                        <Form.Control type="number" name="advance" value={formData.advance || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="number"
+                            name="advance"
+                            value={formData.advance || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter advance"
+                        />
                     </Form.Group>
                     <Form.Group controlId="formNote" className="mb-3">
                         <Form.Label>Note</Form.Label>
-                        <Form.Control type="text" name="note" value={formData.note || ''} onChange={handleInputChange} />
+                        <Form.Control
+                            type="text"
+                            name="note"
+                            value={formData.note || ''}
+                            onChange={handleInputChange}
+                            placeholder="Enter note"
+                        />
                     </Form.Group>
                 </>
             )}
